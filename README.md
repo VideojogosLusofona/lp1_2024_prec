@@ -140,6 +140,9 @@ solução completa do projeto, nomeadamente:
 * Ficheiro de imagem contendo o fluxograma. Este ficheiro deve ser incluído no
   repositório em modo Git LFS.
 
+Não serão aceites projetos sem estes elementos e que não sejam entregues via
+Moodle.
+
 <!--* Documentação HTML ou CHM gerada com [Doxygen], [Sandcastle] ou ferramenta
   similar.-->
 
