@@ -25,7 +25,7 @@ qualquer tipo de inteligência artificial.
 * A peça preta, o lobo, é colocada em qualquer um dos quadrados escuros do lado
   oposto. A seguinte imagem mostra um possível tabuleiro inicial:
 
-![Tabuleiro inicial, imagem obtida de https://ludii.games/details.php?keyword=Wolf%20and%20Sheep](img/board-start.png "Tabuleiro inicial")
+![Possível tabuleiro inicial, imagem obtida de https://ludii.games/details.php?keyword=Wolf%20and%20Sheep](img/board-start.png "Possível tabuleiro inicial")
 
 * O objetivo do lobo é chegar a um dos quadrados originais das ovelhas.
 * O objetivo das ovelhas é bloquear o lobo, impedindo-o de chegar a um dos
@@ -49,7 +49,22 @@ O funcionamento exato da aplicação é da responsabilidade de cada grupo. No
 entanto, quando a aplicação começa, **deve ser claro como cada jogador joga**,
 ou seja, o jogo deve ter instruções muito claras sobre que teclas fazem o quê.
 Por outras palavras, os grupos devem ter em conta as regras importantes do
-_game design_.
+_game design_, pois serão tidas em conta na avaliação do projeto.
+
+A aplicação deve funcionar em Windows, macOS e Linux. A melhor estratégia para
+garantir que assim seja é testar o jogo em Linux (e.g., numa máquina virtual).
+Algumas instruções incompatíveis com macOS e Linux são, por exemplo:
+
+* [Console.Beep()](https://docs.microsoft.com/dotnet/api/system.console.beep)
+* [Console.SetBufferSize()](https://docs.microsoft.com/dotnet/api/system.console.setbuffersize)
+* [Console.SetWindowPosition()](https://docs.microsoft.com/dotnet/api/system.console.setwindowposition)
+* [Console.SetWindowSize()](https://docs.microsoft.com/dotnet/api/system.console.setwindowsize)
+* Entre outras.
+
+As instruções que só funcionam em Windows têm a seguinte indicação na sua
+documentação:
+
+![The current operating system is not Windows.](img/notsupported.png "The current operating system is not Windows.")
 
 ## Organização do código
 
@@ -69,7 +84,8 @@ final.
 
 Este projeto tem os seguintes objetivos:
 
-* **O1** - Programa deve funcionar como especificado.
+* **O1** - Programa deve funcionar como especificado e deve ter em conta as
+  regras básicas do _game design_.
 * **O2** - Projeto e código bem organizados, nomeadamente:
   * Código bem dividido em métodos (funções), eventualmente fazendo uso de
     enumerações, cada uma no seu ficheiro.
