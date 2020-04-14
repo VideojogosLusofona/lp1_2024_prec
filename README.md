@@ -152,6 +152,8 @@ O projeto deve ser entregue por **grupos de 2 a 3 alunos** via Moodle até às
 solução completa do projeto, nomeadamente:
 
 * Pasta escondida `.git` com o repositório Git local do projeto.
+* Código do projeto (ficheiros `.cs`), ficheiro do projeto (`.csproj`) e, caso
+  tenham criado uma solução, o ficheiro da solução (`.sln`).
 * Ficheiro `README.md` contendo o relatório do projeto em formato [Markdown].
 * Ficheiro de imagem contendo o fluxograma. Este ficheiro deve ser incluído no
   repositório em modo Git LFS.
