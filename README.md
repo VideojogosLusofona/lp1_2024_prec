@@ -8,7 +8,7 @@ You should have received a copy of the license along with this
 work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>.
 -->
 
-# Projeto 1 de Linguagens de Programação I 2019/2020
+# Projeto 1 de Linguagens de Programação I 2024/2025
 
 ## Introdução
 
@@ -16,7 +16,7 @@ Os grupos devem implementar o jogo **Wolf and Sheep** na forma de uma
 aplicação de consola .NET Core. O jogo deve ser PvP (_Player vs Player_), sem
 qualquer tipo de inteligência artificial.
 
-## Regras do jogo
+## Regras do Jogo
 
 * O jogo **Wolf and Sheep** é jogado num tabuleiro 8x8 apenas nos quadrados
   escuros.
@@ -43,13 +43,13 @@ qualquer tipo de inteligência artificial.
 
 ![Possível tabuleiro final, imagem obtida de https://ludii.games/details.php?keyword=Wolf%20and%20Sheep](img/board-end.png "Possível tabuleiro final")
 
-## Funcionamento da aplicação
+## Funcionamento da Aplicação
 
 O funcionamento exato da aplicação é da responsabilidade de cada grupo. No
 entanto, quando a aplicação começa, **deve ser claro como cada jogador joga**,
 ou seja, o jogo deve ter instruções muito claras sobre que teclas fazem o quê.
 Por outras palavras, os grupos devem ter em conta as regras importantes do
-_game design_, pois serão tidas em conta na avaliação do projeto.
+_game design_, pois serão tidas em conta na avaliação do projeto. **Toda a interface de utilizador (UI) deve ser implementada exclusivamente com a biblioteca [Spectre.Console](https://spectreconsole.net/)**.
 
 A aplicação deve funcionar em Windows, macOS e Linux. A melhor estratégia para
 garantir que assim seja é testar o jogo em Linux (e.g., numa máquina virtual).
@@ -66,39 +66,30 @@ documentação:
 
 ![The current operating system is not Windows.](img/notsupported.png "The current operating system is not Windows.")
 
-## Organização do código
+## Organização do Código
 
-Para este primeiro projeto, aceita-se que a maior parte do código (ou mesmo
-todo o código), esteja incluído num único ficheiro `Program.cs`. No entanto,
-o código deverá estar bem organizado e dividido em vários métodos (funções).
-Todos os métodos e variáveis da classe `Program` devem ser `private static`
-(atenção que variáveis declaradas dentro dos métodos não podem ser nem
-`private` nem `static`).
+O projeto deve estar devidamente organizado usando a abordagem MVC discutida nas
+aulas, fazendo uso de classes, _structs_ e enumerações. Cada classe, _struct_ ou
+enumeração deve ser colocada num ficheiro com o mesmo nome. Por exemplo, uma
+classe chamada `Card` deve ser colocada no ficheiro `Card.cs`. A estrutura de
+classes deve ser bem pensada usando a abordagem MVC, e [cada classe deve ter
+uma responsabilidade específica e bem definida][SRP].
 
-Caso usem enumerações, cada enumeração deverá estar num ficheiro com o mesmo
-nome. Por exemplo, uma possível enumeração `Player` deverá ser colocada no
-ficheiro `Player.cs`. O uso correto de enumerações será bonificado na nota
-final.
-
-## Objetivos e critério de avaliação
+## Objetivos e Critério de Avaliação
 
 Este projeto tem os seguintes objetivos:
 
 * **O1** - Programa deve funcionar como especificado e deve ter em conta as
   regras básicas do _game design_.
 * **O2** - Projeto e código bem organizados, nomeadamente:
-  * Código bem dividido em métodos (funções), eventualmente fazendo uso de
-    enumerações, cada uma no seu ficheiro.
+  * Estrutura de classes bem pensada (ver secção [Organização do Código](#organizacao-do-codigo)).
   * Código devidamente comentado e indentado.
   * Inexistência de código "morto", que não faz nada, como por exemplo
     variáveis, propriedades ou métodos nunca usados.
   * Projeto compila e executa sem erros e/ou *warnings*.
-* **O3** - Projeto adequadamente documentado. Documentação deve ser feita com
-  [comentários de documentação XML][XML].
-  * Para este projeto não é preciso, para já, gerar a documentação em [Doxygen]
-    ou [DocFX].
+* **O3** - Projeto adequadamente documentado com [comentários de documentação XML][XML].
 * **O4** - Repositório Git deve refletir boa utilização do mesmo, nomeadamente:
-  * Devem existir *commits* de todos os elementos do grupo, _commits_ esses
+  * Devem existir *commits* frequentes, _commits_ esses
     com mensagens que sigam as melhores práticas para o efeito (como indicado
     [aqui](https://chris.beams.io/posts/git-commit/),
     [aqui](https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53),
@@ -109,8 +100,8 @@ Este projeto tem os seguintes objetivos:
     do Visual Studio (na pasta `.vs` ou `.vscode`), não devem estar no
     repositório. Ou seja, devem ser ignorados ao nível do ficheiro
     `.gitignore`.
-  * *Assets* binários necessários, como é o caso da imagem do fluxograma, deve
-    ser integrados no repositório em modo Git LFS.
+  * *Assets* binários necessários, como é o caso da imagem do diagrama UML,
+    devem ser integrados no repositório em modo Git LFS.
 * **O5** - Relatório em formato [Markdown] (ficheiro `README.md`),
   organizado da seguinte forma:
   * Título do projeto.
@@ -118,13 +109,15 @@ Este projeto tem os seguintes objetivos:
     * Nome dos autores (primeiro e último) e respetivos números de aluno.
     * Informação de quem fez o quê no projeto. Esta informação é
       **obrigatória** e deve refletir os *commits* feitos no Git.
-    * Indicação do repositório público Git utilizado. Esta indicação é
-      opcional, pois podem preferir desenvolver o projeto num repositório
-      privado.
+    * Indicação do repositório Git utilizado. Esta indicação é
+      opcional, pois podem preferir manter o repositório privado após a
+      entrega.
   * Arquitetura da solução:
-    * Descrição da solução, com breve explicação de como o programa foi
-      organizado, indicação dos métodos/funções e enumerações criadas.
-    * Um fluxograma mostrando a sequência do programa.
+    * Descrição da solução, com breve explicação de como o código foi
+      organizado, bem como dos algoritmos não triviais que tenham sido
+      implementados.
+    * Um diagrama UML de classes simples (i.e., sem indicação dos
+      membros da classe) descrevendo a estrutura de classes.
   * Referências, incluindo trocas de ideias com colegas, código aberto
     reutilizado (e.g., do StackOverflow) e bibliotecas de terceiros
     utilizadas. Devem ser o mais detalhados possível.
@@ -133,22 +126,23 @@ Este projeto tem os seguintes objetivos:
     Atenção aos erros ortográficos e à correta formatação [Markdown], pois
     ambos serão tidos em conta na nota final.
 
-O projeto tem um peso de 3 valores na nota final da disciplina e será avaliado
+O projeto tem um peso de 10 valores na nota final da disciplina e será avaliado
 de forma qualitativa. Isto significa que todos os objetivos têm de ser
 parcialmente ou totalmente cumpridos. A cada objetivo, O1 a O5, será atribuída
 uma nota entre 0 e 1. A nota do projeto será dada pela seguinte fórmula:
 
-*N = 3 x O1 x O2 x O3 x O4 x O5 x D*
+*N = 10 x O1 x O2 x O3 x O4 x O5 x D*
 
 Em que *D* corresponde à nota da discussão e percentagem equitativa de
 realização do projeto, também entre 0 e 1. Isto significa que se os alunos
 ignorarem completamente um dos objetivos, não tenham feito nada no projeto ou
 não comparerecem na discussão, a nota final será zero.
 
+
 ## Entrega
 
-O projeto deve ser entregue por **grupos de 2 a 3 alunos** via Moodle até às
-23h de 19 de abril de 2020. Deve ser submetido um ficheiro `zip` com a
+O projeto deve ser entregue **individualmente** via Moodle até às
+17h de 26 de junho de 2025. Deve ser submetido um ficheiro `zip` com a
 solução completa do projeto, nomeadamente:
 
 * Pasta escondida `.git` com o repositório Git local do projeto.
@@ -161,10 +155,7 @@ solução completa do projeto, nomeadamente:
 Não serão aceites projetos sem estes elementos e que não sejam entregues via
 Moodle.
 
-<!--* Documentação HTML ou CHM gerada com [Doxygen], [Sandcastle] ou ferramenta
-  similar.-->
-
-## Honestidade académica
+## Honestidade Académica
 
 Nesta disciplina, espera-se que cada aluno siga os mais altos padrões de
 honestidade académica. Isto significa que cada ideia que não seja do
@@ -227,4 +218,5 @@ Estruturas de Dados][aed] do [Instituto Superior Técnico][ist]*
 [Doxygen]:https://www.stack.nl/~dimitri/doxygen/
 [DocFX]:https://dotnet.github.io/docfx/
 [XML]:https://docs.microsoft.com/dotnet/csharp/codedoc
+[SRP]:https://en.wikipedia.org/wiki/Single_responsibility_principle
 [2º projeto de LP1 2018/19]:https://github.com/VideojogosLusofona/lp1_2018_p2_solucao
