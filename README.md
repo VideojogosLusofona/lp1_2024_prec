@@ -1,20 +1,20 @@
 <!--
-Projeto 1 de Linguagens de Programação I 2019/2020 (c) by Nuno Fachada
+Projeto de Recurso de Linguagens de Programação I 2019/2020 (c) by Nuno Fachada
 
-Projeto 1 de Linguagens de Programação I 2019/2020 is licensed under a
+Projeto de Recurso de Linguagens de Programação I 2019/2020 is licensed under a
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
 You should have received a copy of the license along with this
 work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>.
 -->
 
-# Projeto 1 de Linguagens de Programação I 2024/2025
+# Projeto de Recurso de Linguagens de Programação I 2024/2025
 
 ## Introdução
 
 Os grupos devem implementar o jogo **Wolf and Sheep** na forma de uma
-aplicação de consola .NET Core. O jogo deve ser PvP (_Player vs Player_), sem
-qualquer tipo de inteligência artificial.
+aplicação de consola .NET 8.0 / C# 8.0. O jogo deve ser PvP (_Player vs Player_),
+sem qualquer tipo de inteligência artificial.
 
 ## Regras do Jogo
 
@@ -45,13 +45,15 @@ qualquer tipo de inteligência artificial.
 
 ## Funcionamento da Aplicação
 
-O funcionamento exato da aplicação é da responsabilidade de cada grupo. No
+O funcionamento exato da aplicação é da responsabilidade de cada estudante. No
 entanto, quando a aplicação começa, **deve ser claro como cada jogador joga**,
 ou seja, o jogo deve ter instruções muito claras sobre que teclas fazem o quê.
-Por outras palavras, os grupos devem ter em conta as regras importantes do
-_game design_, pois serão tidas em conta na avaliação do projeto. **Toda a interface de utilizador (UI) deve ser implementada exclusivamente com a biblioteca [Spectre.Console](https://spectreconsole.net/)**.
+Por outras palavras, os estudantes devem ter em conta as regras importantes do
+_game design_, pois serão tidas em conta na avaliação do projeto. **Toda a
+interface de utilizador (UI) deve ser implementada exclusivamente com a
+biblioteca [Spectre.Console](https://spectreconsole.net/)**.
 
-A aplicação deve funcionar em Windows, macOS e Linux. A melhor estratégia para
+<!--A aplicação deve funcionar em Windows, macOS e Linux. A melhor estratégia para
 garantir que assim seja é testar o jogo em Linux (e.g., numa máquina virtual).
 Algumas instruções incompatíveis com macOS e Linux são, por exemplo:
 
@@ -64,14 +66,14 @@ Algumas instruções incompatíveis com macOS e Linux são, por exemplo:
 As instruções que só funcionam em Windows têm a seguinte indicação na sua
 documentação:
 
-![The current operating system is not Windows.](img/notsupported.png "The current operating system is not Windows.")
+![The current operating system is not Windows.](img/notsupported.png "The current operating system is not Windows.")-->
 
 ## Organização do Código
 
 O projeto deve estar devidamente organizado usando a abordagem MVC discutida nas
 aulas, fazendo uso de classes, _structs_ e enumerações. Cada classe, _struct_ ou
 enumeração deve ser colocada num ficheiro com o mesmo nome. Por exemplo, uma
-classe chamada `Card` deve ser colocada no ficheiro `Card.cs`. A estrutura de
+classe chamada `Piece` deve ser colocada no ficheiro `Piece.cs`. A estrutura de
 classes deve ser bem pensada usando a abordagem MVC, e [cada classe deve ter
 uma responsabilidade específica e bem definida][SRP].
 
@@ -79,16 +81,16 @@ uma responsabilidade específica e bem definida][SRP].
 
 Este projeto tem os seguintes objetivos:
 
-* **O1** - Programa deve funcionar como especificado e deve ter em conta as
+* $O_1$ - Programa deve funcionar como especificado e deve ter em conta as
   regras básicas do _game design_.
-* **O2** - Projeto e código bem organizados, nomeadamente:
-  * Estrutura de classes bem pensada (ver secção [Organização do Código](#organizacao-do-codigo)).
+* $O_2$ - Projeto e código bem organizados, nomeadamente:
+  * Estrutura de classes bem pensada (ver secção [Organização do Código](#organização-do-código)).
   * Código devidamente comentado e indentado.
   * Inexistência de código "morto", que não faz nada, como por exemplo
     variáveis, propriedades ou métodos nunca usados.
   * Projeto compila e executa sem erros e/ou *warnings*.
-* **O3** - Projeto adequadamente documentado com [comentários de documentação XML][XML].
-* **O4** - Repositório Git deve refletir boa utilização do mesmo, nomeadamente:
+* $O_3$ - Projeto adequadamente documentado com [comentários de documentação XML][XML].
+* $O_4$ - Repositório Git deve refletir boa utilização do mesmo, nomeadamente:
   * Devem existir *commits* frequentes, _commits_ esses
     com mensagens que sigam as melhores práticas para o efeito (como indicado
     [aqui](https://chris.beams.io/posts/git-commit/),
@@ -102,16 +104,16 @@ Este projeto tem os seguintes objetivos:
     `.gitignore`.
   * *Assets* binários necessários, como é o caso da imagem do diagrama UML,
     devem ser integrados no repositório em modo Git LFS.
-* **O5** - Relatório em formato [Markdown] (ficheiro `README.md`),
+* $O_5$ - Relatório em formato [Markdown] (ficheiro `README.md`),
   organizado da seguinte forma:
   * Título do projeto.
   * Autoria:
-    * Nome dos autores (primeiro e último) e respetivos números de aluno.
-    * Informação de quem fez o quê no projeto. Esta informação é
+    * Nome do autor (primeiro e último) e respetivo número de estudante.
+    <!-- * Informação de quem fez o quê no projeto. Esta informação é
       **obrigatória** e deve refletir os *commits* feitos no Git.
     * Indicação do repositório Git utilizado. Esta indicação é
       opcional, pois podem preferir manter o repositório privado após a
-      entrega.
+      entrega. -->
   * Arquitetura da solução:
     * Descrição da solução, com breve explicação de como o código foi
       organizado, bem como dos algoritmos não triviais que tenham sido
@@ -131,13 +133,12 @@ de forma qualitativa. Isto significa que todos os objetivos têm de ser
 parcialmente ou totalmente cumpridos. A cada objetivo, O1 a O5, será atribuída
 uma nota entre 0 e 1. A nota do projeto será dada pela seguinte fórmula:
 
-*N = 10 x O1 x O2 x O3 x O4 x O5 x D*
+$N = 10 \times O_1 \times O_2 \times O_3 \times O_4 \times O_5 \times D$
 
-Em que *D* corresponde à nota da discussão e percentagem equitativa de
+Em que $D$ corresponde à nota da discussão e percentagem equitativa de
 realização do projeto, também entre 0 e 1. Isto significa que se os alunos
 ignorarem completamente um dos objetivos, não tenham feito nada no projeto ou
 não comparerecem na discussão, a nota final será zero.
-
 
 ## Entrega
 
@@ -149,8 +150,9 @@ solução completa do projeto, nomeadamente:
 * Código do projeto (ficheiros `.cs`), ficheiro do projeto (`.csproj`) e, caso
   tenham criado uma solução, o ficheiro da solução (`.sln`).
 * Ficheiro `README.md` contendo o relatório do projeto em formato [Markdown].
-* Ficheiro de imagem contendo o fluxograma. Este ficheiro deve ser incluído no
-  repositório em modo Git LFS.
+* Ficheiro de imagem contendo o diagrama UML, incluído no repositório em modo
+  Git LFS. Em alternativa podem (e devem) usar o [Mermaid] para fazer o diagrama
+  UML.
 
 Não serão aceites projetos sem estes elementos e que não sejam entregues via
 Moodle.
@@ -159,12 +161,12 @@ Moodle.
 
 Nesta disciplina, espera-se que cada aluno siga os mais altos padrões de
 honestidade académica. Isto significa que cada ideia que não seja do
-aluno deve ser claramente indicada, com devida referência ao respectivo
+aluno deve ser claramente indicada, com devida referência ao respetivo
 autor. O não cumprimento desta regra constitui plágio.
 
 O plágio inclui a utilização de ideias, código ou conjuntos de soluções
 de outros alunos ou indivíduos, ou quaisquer outras fontes para além
-dos textos de apoio à disciplina, sem dar o respectivo crédito a essas
+dos textos de apoio à disciplina, sem dar o respetivo crédito a essas
 fontes. Os alunos são encorajados a discutir os problemas com outros
 alunos e devem mencionar essa discussão quando submetem os projetos.
 Essa menção **não** influenciará a nota. Os alunos não deverão, no
@@ -173,6 +175,16 @@ seus próprios códigos, documentação e relatórios a outros em qualquer
 circunstância. De facto, não devem sequer deixar códigos, documentação e
 relatórios em computadores de uso partilhado.
 
+**Sobre IAs generativas (e.g. ChatGPT):** Podem usar este tipo de ferramentas
+para esclarecer dúvidas, ou até para obter sugestões de código e/ou organização
+do projeto, desde de que as ideias e organização geral do mesmo sejam originais.
+Podem também usar estas ferramentas para corrigir o Português (ou Inglês) do
+relatório. Código, arquiteturas de projeto, e relatórios completamente escritos
+por uma IA generativa serão facilmente detetáveis, pelo que sugerimos muito
+cuidado no uso deste tipo de ferramentas. De qualquer forma, toda a utilização
+de IA generativa deve ser indicada em forma de comentários no código e nas
+explicitamente indicada no relatório.
+
 Nesta disciplina, a desonestidade académica é considerada fraude, com
 todas as consequências legais que daí advêm. Qualquer fraude terá como
 consequência imediata a anulação dos projetos de todos os alunos envolvidos
@@ -180,7 +192,7 @@ consequência imediata a anulação dos projetos de todos os alunos envolvidos
 desonestidade académica será relatada aos órgãos superiores da escola
 para possível instauração de um processo disciplinar. Este poderá
 resultar em reprovação à disciplina, reprovação de ano ou mesmo suspensão
-temporária ou definitiva da ULHT.
+temporária ou definitiva da [Universidade Lusófona].
 
 *Texto adaptado da disciplina de [Algoritmos e
 Estruturas de Dados][aed] do [Instituto Superior Técnico][ist]*
@@ -204,19 +216,18 @@ Estruturas de Dados][aed] do [Instituto Superior Técnico][ist]*
 
 ## Metadados
 
-* Autor: [Nuno Fachada]
+* Autores: [Nuno Fachada], [Afonso Oliveira]
 * Curso:  [Licenciatura em Videojogos][lamv]
-* Instituição: [Universidade Lusófona de Humanidades e Tecnologias][ULHT]
+* Instituição: [Universidade Lusófona - Centro Universitário de Lisboa][Universidade Lusófona]
 
 [CC BY-NC-SA 4.0]:https://creativecommons.org/licenses/by-nc-sa/4.0/
 [lamv]:https://www.ulusofona.pt/licenciatura/videojogos
 [Nuno Fachada]:https://github.com/fakenmc
-[ULHT]:https://www.ulusofona.pt/
+[Afonso Oliveira]:https://github.com/afe-oliveira/
+[Universidade Lusófona]:https://www.ulusofona.pt/
 [aed]:https://fenix.tecnico.ulisboa.pt/disciplinas/AED-2/2009-2010/2-semestre/honestidade-academica
 [ist]:https://tecnico.ulisboa.pt/pt/
 [Markdown]:https://guides.github.com/features/mastering-markdown/
-[Doxygen]:https://www.stack.nl/~dimitri/doxygen/
-[DocFX]:https://dotnet.github.io/docfx/
 [XML]:https://docs.microsoft.com/dotnet/csharp/codedoc
 [SRP]:https://en.wikipedia.org/wiki/Single_responsibility_principle
-[2º projeto de LP1 2018/19]:https://github.com/VideojogosLusofona/lp1_2018_p2_solucao
+[Mermaid]:http://mermaid.js.org/
