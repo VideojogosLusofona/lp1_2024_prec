@@ -203,9 +203,9 @@ Estruturas de Dados][aed] do [Instituto Superior Técnico][ist]*
   <https://ludii.games/details.php?keyword=Wolf%20and%20Sheep>.
 * \[2\] **Fox and Hounds**. Retrieved from
   <https://boardgamegeek.com/boardgame/148180/fox-and-hounds>.
-* \[3\] Whitaker, R. B. (2016). **The C# Player's Guide** (3rd Edition).
+* \[3\] Whitaker, R. B. (2022). **The C# Player's Guide** (5th Edition).
   Starbound Software.
-* \[4\] Albahari, J. (2017). **C# 7.0 in a Nutshell**. O’Reilly Media.
+* \[4\] Albahari, J. (2020). **C# 8.0 in a Nutshell**. O’Reilly Media.
 * \[5\] Dorsey, T. (2017). **Doing Visual Studio and .NET Code Documentation
   Right**. Visual Studio Magazine. Retrieved from
   <https://visualstudiomagazine.com/articles/2017/02/21/vs-dotnet-code-documentation-tools-roundup.aspx>.
